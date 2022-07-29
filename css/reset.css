@@ -1,0 +1,48 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {margin: 0;padding: 0; border: 0;font-size: 100%;font: inherit;vertical-align: baseline; box-sizing: border-box;}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {display: block;}
+body {line-height: 1; color: #333; font-family: 'Noto Sans KR', sans-serif; font-weight: 400; word-break: keep-all;}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,
+q:before, q:after {content: '';}
+table {border-collapse: collapse;border-spacing: 0;}
+a{text-decoration: none; color: #333; -webkit-tap-highlight-color:transparent /* 사파리 하이라이트 초기화*/;}
+img{max-width: 100%;}
+button{background: inherit ; border:none; box-shadow:none; border-radius:0; padding:0; overflow:visible; cursor:pointer;}
+
+/* Form 스타일 초기화 */
+select {-webkit-appearance: none;-moz-appearance: none;appearance: none; box-sizing: border-box;}
+select:focus-visible{outline: none;}
+/* IE 에서 Select box 화살표 제거 */
+select::-ms-expand { display: none; }
+input{box-sizing: border-box;}
+/* input 기본 스타일 초기화 */
+input {-webkit-appearance: none;-moz-appearance: none;appearance: none;}
+/* IE10 이상에서 input box 에 추가된 지우기 버튼 제거 */
+input::-ms-clear { display: none; }
+/* input type number 에서 화살표 제거 */
+input[type='number']::-webkit-inner-spin-button, input[type='number']::-webkit-outer-spin-button {-webkit-appearance: none;-moz-appearance: none; appearance: none;}
+input:focus-visible{outline: none;}
+input[type = "checkbox"]{display: none;}
+
+/* swiper 스타일 초기화 */
+.swiper-button-next::after, .swiper-button-prev::after {display: none;}

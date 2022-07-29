@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no" /> <!-- 사파리 전화번호 컬러 변경 문제 해결 -->
+  <title>신차줘</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+</head>
+
+<body>
+<!-- header -->
+<header class="header_wrap">
+  <div class="container">
+    <h1><a href="index.html"><img src="/images/common/header_logo.png" alt="신차줘 로고"></a></h1>
+    <ul class="pc_header">
+      <li><a href="javascript:">렌트/리스소개</a></li>
+      <li><a href="javascript:">견적 신청</a></li>
+      <li><a href="javascript:">표준렌탈료</a></li>
+      <li><a href="javascript:">표준리스료</a></li>
+      <li><a href="javascript:">내차팔기</a></li>
+      <li><a href="javascript:">출고후기</a></li>
+      <li><a href="javascript:">고객센터</a>
+        <ul class="header_submenu">
+          <li><a href="javascript:">공지사항</a></li>
+          <li><a href="javascript:">자주묻는질문</a></li>
+        </ul>
+      </li>
+      <li><a href="">회사소개</a></li>
+    </ul>
+    <button class="mo_header_btn"><i class="fa-solid fa-bars"></i></button>
+  </div>
+  <div class="mo_menu">
+    <div class="mo_menu_header">
+      <button class="mo_close_btn"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <ul class="mo_list">
+      <li><a href="javascript:">렌트/리스소개</a></li>
+      <li><a href="javascript:">견적 신청</a></li>
+      <li><a href="javascript:">표준렌탈료</a></li>
+      <li><a href="javascript:">표준리스료</a></li>
+      <li><a href="javascript:">내차팔기</a></li>
+      <li><a href="javascript:">출고후기</a></li>
+      <li><a href="javascript:">고객센터<i class="fa-solid fa-chevron-right"></i></a>
+        <ul class="mo_sublist">
+          <li><a href="javascript:">- 공지사항</a></li>
+          <li><a href="javascript:">- 자주묻는질문</a></li>
+        </ul>
+      </li>
+      <li><a href="">회사소개</a></li>
+    </ul>
+  </div>
+  <div class="mo_menu_bg"></div>
+</header>
+
+<!-- quickmenu -->
+<div class="quickmenu">
+  <div class="quickmenu_wrap">
+    <div class="quick_name">
+      <h3>Quick menu</h3>
+    </div>
+    <div class="quick_list">
+      <ul>
+        <li><a href="javascript:"><img src="images/main/quick1.png" alt="견적신청 아이콘">견적신청</a></li>
+        <li><a href="javascript:"><img src="images/main/quick2.png" alt="카톡상담 아이콘">카톡상담</a></li>
+        <li><a href="tel:1234-5678"><img src="images/main/quick3.png" alt="연락처 아이콘">1234-5678</a></li>
+        <li><a href="javascript:"><img src="images/main/quick4.png" alt="최저가보장 아이콘">최저가 보장<br><span>타업체 견적서 첨부</span></a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="quick_top_btn">
+    <h3><a href="javascript:">TOP <i class="fa-solid fa-arrow-up"></i></a></h3>
+  </div>
+</div>
+
+<section class="section1">
+  <ul class="main_banner">
+    <li><a href="javascript:">
+      <img src="/images/main/banner1.jpg" alt="썸머 얼리버드 전 차종 할인 이벤트">
+      <img src="/images/main/banner1_m.jpg" alt="썸머 얼리버드 전 차종 할인 이벤트">
+    </a></li>
+  </ul>
+</section>
+
+<section class="section2">
+  <div class="container">
+    <div class="top_form_wrap">
+      <h2>실시간 최저가 견적 확인</h2>
+      <form action="#" class="top_form">
+        <ul class="car_location">
+        </ul>
+        <select name="car_make" id="car_make" onchange="fn_vehicle(this.value);">
+          <option value="제조사를 선택해주세요">제조사를 선택해주세요</option>
+        </select>
+        <select name=car_vehicle" id="car_vehicle" onchange="fn_option(this.value)">
+          <option value="차량을 선택해주세요">차량을 선택해주세요</option>
+        </select>
+        <select name=car_option" id="car_option" onchange="fn_model(this.value)">
+          <option value="차종을 선택해주세요">차종을 선택해주세요</option>
+        </select>
+        <select name=car_model" id="car_model">
+          <option value="차량을 선택해주세요">차량을 선택해주세요</option>
+        </select>
+        <button type="submit">실시간 견적 확인</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="section3 section_pd">
+  <div class="container">
+    <h2 class="main_tt">이달의 <span class="col_blue">프로모션 특가</span> 차량</h2>
+    <div class="swiper promotion_swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide promotion_slide">
+          <div class="promotion_img carnival">
+            <div class="promotion_badge">
+              <div class="red_badge">HOT SALE</div>
+              <div class="purple_badge">즉시출고</div>
+              <div class="orange_badge">신형출시</div>
+            </div>
+          </div>
+          <div class="promotion_content">
+            <h3>카니발</h3>
+            <p class="car_info">4세대 프레스티지 2.2(D)</p>
+            <p class="car_price">차량가격 3,545만원</p>
+            <p class="general_price">일반견적가 : 월 430,000원</p>
+            <p class="final_price">최종 특가 : 월 <span>330,000원</span></p>
+            <button><a href="javascript:">간편 견적 신청</a></button>
+          </div>
+        </div>
+        <div class="swiper-slide promotion_slide">
+          <div class="promotion_img g80">
+            <div class="promotion_badge">
+              <div class="red_badge">HOT SALE</div>
+              <div class="purple_badge">즉시출고</div>
+            </div>
+          </div>
+          <div class="promotion_content">
+            <h3>G80</h3>
+            <p class="car_info">2.5T(G)</p>
+            <p class="car_price">차량가격 6,126만원</p>
+            <p class="general_price">일반견적가 : 월 710,000원</p>
+            <p class="final_price">최종 특가 : 월 <span>640,000원</span></p>
+            <button><a href="javascript:">간편 견적 신청</a></button>
+          </div>
+        </div>
+        <div class="swiper-slide promotion_slide">
+          <div class="promotion_img thenewsantafe">
+            <div class="promotion_badge">
+              <div class="red_badge">HOT SALE</div>
+            </div>
+          </div>
+          <div class="promotion_content">
+            <h3>더 뉴 싼타페</h3>
+            <p class="car_info">프리미엄초이스 2.2(D)</p>
+            <p class="car_price">차량가격 3,421만원</p>
+            <p class="general_price">일반견적가 : 월 440,000원</p>
+            <p class="final_price">최종 특가 : 월 <span>340,000원</span></p>
+            <button><a href="javascript:">간편 견적 신청</a></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="promotion-button-next"></div>
+    <div class="promotion-button-prev"></div>
+  </div>
+</section>
+
+<section class="section4 section_pd">
+  <div class="container">
+    <div class="realtime_status_wrap">
+      <h2><span class="col_purple">실시간</span> 견적 신청 현황</h2>
+      <div class="swiper realtime_swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide realtime_slide">
+            <p class="realtime_name">최**</p>
+            <p>국산</p>
+            <p>기아</p>
+            <p>카니발</p>
+            <p>신청</p>
+            <p>2020-12-01</p>
+          </div>
+          <div class="swiper-slide realtime_slide">
+            <p class="realtime_name">이**</p>
+            <p>수입</p>
+            <p>BMW</p>
+            <p>520d</p>
+            <p>신청</p>
+            <p>2020-12-01</p>
+          </div>
+          <div class="swiper-slide realtime_slide">
+            <p class="realtime_name">박**</p>
+            <p>국산</p>
+            <p>현대</p>
+            <p>올뉴싼타페</p>
+            <p>신청</p>
+            <p>2020-12-01</p>
+          </div>
+          <div class="swiper-slide realtime_slide">
+            <p class="realtime_name">박**</p>
+            <p>국산</p>
+            <p>쌍용</p>
+            <p>티볼리</p>
+            <p>신청</p>
+            <p>2020-12-01</p>
+          </div>
+          <div class="swiper-slide realtime_slide">
+            <p class="realtime_name">조**</p>
+            <p>국산</p>
+            <p>현대</p>
+            <p>G80</p>
+            <p>신청</p>
+            <p>2020-12-01</p>
+          </div>
+          <div class="swiper-slide realtime_slide">
+            <p class="realtime_name">가**</p>
+            <p>국산</p>
+            <p>기아</p>
+            <p>K5</p>
+            <p>신청</p>
+            <p>2020-12-01</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="easy_form_wrap">
+      <h2><span class="col_purple">간편</span> 견적 상담 신청</h2>
+      <div class="rent_auto_form">
+        <ul>
+          <li class="active"><a href="javascript:">장기렌트</a></li>
+          <li><a href="javascript:">오토리스</a></li>
+        </ul>
+        <div class="rent_form_wrap">
+          <form action="#" class="rent_form">
+            <label for="rent_name"></label>
+            <input type="text" id="rent_name" name="rent_name" placeholder="성함을 입력하세요" autocomplete='off' required>
+            <label for="rent_tel"></label>
+            <input type="tel" id="rent_tel" name="rent_tel" placeholder="연락처를 입력하세요" autocomplete='off' required>
+            <label for="rent_car"></label>
+            <input type="text" id="rent_car" name="rent_car" placeholder="희망차종을 입력하세요" autocomplete='off' required>
+            <div class="check_wrap">
+              <div>
+                <input type="checkbox" id="rent_check1" name="rent_check1">
+                <label for="rent_check1">개인정보 수집이용 동의</label>
+                <span class="terms_btn"><a href="javascript:">약관보기</a></span>
+              </div>
+              <div>
+                <input type="checkbox" id="rent_check2" name="rent_check2">
+                <label for="rent_check2">마케팅 정보수신 동의</label>
+                <span class="terms_btn"><a href="javascript:">약관보기</a></span>
+              </div>
+            </div>
+            <button type="submit">실시간 견적 확인</button>
+          </form>
+        </div>
+        <div class="lis_form_wrap">
+          <form action="#" class="lis_form">
+            <label for="lis_name"></label>
+            <input type="text" id="lis_name" name="lis_name" placeholder="성함을 입력하세요" autocomplete='off' required>
+            <label for="lis_tel"></label>
+            <input type="tel" id="lis_tel" name="lis_tel" placeholder="연락처를 입력하세요" autocomplete='off' required>
+            <label for="lis_car"></label>
+            <input type="text" id="lis_car" name="lis_car" placeholder="희망차종을 입력하세요" autocomplete='off' required>
+            <div class="check_wrap">
+              <div>
+                <input type="checkbox" id="lis_check1" name="lis_check1">
+                <label for="lis_check1">개인정보 수집이용 동의</label>
+                <span class="terms_btn"><a href="javascript:">약관보기</a></span>
+              </div>
+              <div>
+                <input type="checkbox" id="lis_check2" name="lis_check2">
+                <label for="lis_check2">마케팅 정보수신 동의</label>
+                <span class="terms_btn"><a href="javascript:">약관보기</a></span>
+              </div>
+            </div>
+            <button type="submit">실시간 견적 확인</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section5 section_pd">
+  <div class="container">
+    <h2 class="main_tt"><span class="col_blue">신차줘</span>에서 확보한 <span class="col_blue">즉시 출고</span> 차량</h2>
+    <div class="quick_box">
+      <div class="swiper quick_swiper">
+        <div class="swiper-wrapper quick-wrapper">
+          <div class="swiper-slide quick_slide">
+            <div class="quick_img"></div>
+            <div class="quick_content">
+              <div class="quick_info">
+                <h3>그랜저 하이브리드</h3>
+                <p>익스클루시브 2.4(H) | 3,545만원</p>
+                <p>최종 특가 : 월 <span>330,000원</span></p>
+              </div>
+              <button><a href="javascript:">견적<br>신청</a></button>
+            </div>
+          </div>
+          <div class="swiper-slide quick_slide">
+            <div class="quick_img"></div>
+            <div class="quick_content">
+              <div class="quick_info">
+                <h3>그랜저 하이브리드</h3>
+                <p>익스클루시브 2.4(H) | 3,545만원</p>
+                <p>최종 특가 : 월 <span>330,000원</span></p>
+              </div>
+              <button><a href="javascript:">견적<br>신청</a></button>
+            </div>
+          </div>
+          <div class="swiper-slide quick_slide">
+            <div class="quick_img"></div>
+            <div class="quick_content">
+              <div class="quick_info">
+                <h3>그랜저 하이브리드</h3>
+                <p>익스클루시브 2.4(H) | 3,545만원</p>
+                <p>최종 특가 : 월 <span>330,000원</span></p>
+              </div>
+              <button><a href="javascript:">견적<br>신청</a></button>
+            </div>
+          </div>
+          <div class="swiper-slide quick_slide">
+            <div class="quick_img"></div>
+            <div class="quick_content">
+              <div class="quick_info">
+                <h3>그랜저 하이브리드</h3>
+                <p>익스클루시브 2.4(H) | 3,545만원</p>
+                <p>최종 특가 : 월 <span>330,000원</span></p>
+              </div>
+              <button><a href="javascript:">견적<br>신청</a></button>
+            </div>
+          </div>
+          <div class="swiper-slide quick_slide">
+            <div class="quick_img"></div>
+            <div class="quick_content">
+              <div class="quick_info">
+                <h3>그랜저 하이브리드</h3>
+                <p>익스클루시브 2.4(H) | 3,545만원</p>
+                <p>최종 특가 : 월 <span>330,000원</span></p>
+              </div>
+              <button><a href="javascript:">견적<br>신청</a></button>
+            </div>
+          </div>
+          <div class="swiper-slide quick_slide">
+            <div class="quick_img"></div>
+            <div class="quick_content">
+              <div class="quick_info">
+                <h3>그랜저 하이브리드</h3>
+                <p>익스클루시브 2.4(H) | 3,545만원</p>
+                <p>최종 특가 : 월 <span>330,000원</span></p>
+              </div>
+              <button><a href="javascript:">견적<br>신청</a></button>
+            </div>
+          </div>
+          <div class="swiper-slide quick_slide">
+            <div class="quick_img"></div>
+            <div class="quick_content">
+              <div class="quick_info">
+                <h3>그랜저 하이브리드</h3>
+                <p>익스클루시브 2.4(H) | 3,545만원</p>
+                <p>최종 특가 : 월 <span>330,000원</span></p>
+              </div>
+              <button><a href="javascript:">견적<br>신청</a></button>
+            </div>
+          </div>
+          <div class="swiper-slide quick_slide">
+            <div class="quick_img"></div>
+            <div class="quick_content">
+              <div class="quick_info">
+                <h3>그랜저 하이브리드</h3>
+                <p>익스클루시브 2.4(H) | 3,545만원</p>
+                <p>최종 특가 : 월 <span>330,000원</span></p>
+              </div>
+              <button><a href="javascript:">견적<br>신청</a></button>
+            </div>
+          </div>
+          <div class="swiper-slide quick_slide">
+            <div class="quick_img"></div>
+            <div class="quick_content">
+              <div class="quick_info">
+                <h3>그랜저 하이브리드</h3>
+                <p>익스클루시브 2.4(H) | 3,545만원</p>
+                <p>최종 특가 : 월 <span>330,000원</span></p>
+              </div>
+              <button><a href="javascript:">견적<br>신청</a></button>
+            </div>
+          </div>
+          <div class="swiper-slide quick_slide">
+            <div class="quick_img"></div>
+            <div class="quick_content">
+              <div class="quick_info">
+                <h3>그랜저 하이브리드</h3>
+                <p>익스클루시브 2.4(H) | 3,545만원</p>
+                <p>최종 특가 : 월 <span>330,000원</span></p>
+              </div>
+              <button><a href="javascript:">견적<br>신청</a></button>
+            </div>
+          </div>
+          <div class="swiper-slide quick_slide">
+            <div class="quick_img"></div>
+            <div class="quick_content">
+              <div class="quick_info">
+                <h3>그랜저 하이브리드</h3>
+                <p>익스클루시브 2.4(H) | 3,545만원</p>
+                <p>최종 특가 : 월 <span>330,000원</span></p>
+              </div>
+              <button><a href="javascript:">견적<br>신청</a></button>
+            </div>
+          </div>
+          <div class="swiper-slide quick_slide">
+            <div class="quick_img"></div>
+            <div class="quick_content">
+              <div class="quick_info">
+                <h3>그랜저 하이브리드</h3>
+                <p>익스클루시브 2.4(H) | 3,545만원</p>
+                <p>최종 특가 : 월 <span>330,000원</span></p>
+              </div>
+              <button><a href="javascript:">견적<br>신청</a></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="quick-button-next"></div>
+      <div class="quick-button-prev"></div>
+    </div>
+    <div class="more_btn_box">
+      <button type="button" class="plus_btn">더보기 <i class="fa-solid fa-plus"></i></button>
+      <button type="button" class="minus_btn">닫기 <i class="fa-solid fa-minus"></i></button>
+    </div>
+    </div>
+</section>
+
+<section class="section6 section_pd">
+  <div class="container">
+    <h2 class="main_tt">원하는 차량의 <span class="col_yellow">최저가 렌탈료 즉시 확인<span class="font-italic">!</span></span></h2>
+    <p>신차줘에서는 렌탈료를 숨기는 업체와는 다르게 특가 차량을 다량 확보하고 있습니다.</p>
+    <div class="rental_form_wrap">
+      <ul class="allcar_btn_list">
+        <li class="allcar_rental_btn"><a href="javascript:">모든 차량 최저가 렌탈료 보기 <i class="fa-solid fa-angle-right"></i></a></li>
+        <li class="allcar_liss_btn"><a href="javascript:">모든 차량 최저가 리스료 보기 <i class="fa-solid fa-angle-right"></i></a></li>
+      </ul>
+      <form action="#" class="rental_form">
+        <ul class="car_location1">
+        </ul>
+        <select name="car_make" id="car_make1" onchange="fn_vehicle(this.value);">
+          <option value="제조사를 선택해주세요">제조사를 선택해주세요</option>
+        </select>
+        <select name=car_vehicle" id="car_vehicle1" onchange="fn_option(this.value)">
+          <option value="차량을 선택해주세요">차량을 선택해주세요</option>
+        </select>
+        <select name=car_option" id="car_option1" onchange="fn_model(this.value)">
+          <option value="차종을 선택해주세요">차종을 선택해주세요</option>
+        </select>
+        <select name=car_model" id="car_model1">
+          <option value="차량을 선택해주세요">차량을 선택해주세요</option>
+        </select>
+        <button type="submit">실시간 견적 확인</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="section7 section_pd">
+  <div class="container">
+    <h2 class="main_tt"><span class="col_blue">신차줘</span> 적극 추천 <span class="col_blue">BEST</span> 출고 차량</h2>
+    <div class="best_box">
+      <div class="swiper best_swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide best_slide">
+            <ul>
+              <li>
+                <img src="/images/main/best_1st.png" alt="BEST 순위">
+              </li>
+              <li>
+                <img src="/images/main/car_palisade.png" alt="차 이미지">
+              </li>
+              <li>펠리세이드</li>
+              <li>
+                프레스티지 2.2(D)<br>차량가격 6,126만원
+              </li>
+              <li>
+                최종 특가 : 월 <span>480,000원</span>
+              </li>
+              <li>
+                <button type="button">간편 견적 신청</button>
+              </li>
+            </ul>
+          </div>
+          <div class="swiper-slide best_slide">
+            <ul>
+              <li>
+                <img src="/images/main/best_2st.png" alt="BEST 순위">
+              </li>
+              <li>
+                <img src="/images/main/car_palisade.png" alt="차 이미지">
+              </li>
+              <li>펠리세이드</li>
+              <li>
+                프레스티지 2.2(D)<br>차량가격 6,126만원
+              </li>
+              <li>
+                최종 특가 : 월 <span>480,000원</span>
+              </li>
+              <li>
+                <button type="button">간편 견적 신청</button>
+              </li>
+            </ul>
+          </div>
+          <div class="swiper-slide best_slide">
+            <ul>
+              <li>
+                <img src="/images/main/best_3st.png" alt="BEST 순위">
+              </li>
+              <li>
+                <img src="/images/main/car_palisade.png" alt="차 이미지">
+              </li>
+              <li>펠리세이드</li>
+              <li>
+                프레스티지 2.2(D)<br>차량가격 6,126만원
+              </li>
+              <li>
+                최종 특가 : 월 <span>480,000원</span>
+              </li>
+              <li>
+                <button type="button">간편 견적 신청</button>
+              </li>
+            </ul>
+          </div>
+          <div class="swiper-slide best_slide">
+            <ul>
+              <li>
+                <img src="/images/main/best_4st.png" alt="BEST 순위">
+              </li>
+              <li>
+                <img src="/images/main/car_palisade.png" alt="차 이미지">
+              </li>
+              <li>펠리세이드</li>
+              <li>
+                프레스티지 2.2(D)<br>차량가격 6,126만원
+              </li>
+              <li>
+                최종 특가 : 월 <span>480,000원</span>
+              </li>
+              <li>
+                <button type="button">간편 견적 신청</button>
+              </li>
+            </ul>
+          </div>
+          <div class="swiper-slide best_slide">
+            <ul>
+              <li>
+                <img src="/images/main/best_5st.png" alt="BEST 순위">
+              </li>
+              <li>
+                <img src="/images/main/car_palisade.png" alt="차 이미지">
+              </li>
+              <li>펠리세이드</li>
+              <li>
+                프레스티지 2.2(D)<br>차량가격 6,126만원
+              </li>
+              <li>
+                최종 특가 : 월 <span>480,000원</span>
+              </li>
+              <li>
+                <button type="button">간편 견적 신청</button>
+              </li>
+            </ul>
+          </div>
+          <div class="swiper-slide best_slide">
+            <ul>
+              <li>
+                <img src="/images/main/best_6st.png" alt="BEST 순위">
+              </li>
+              <li>
+                <img src="/images/main/car_palisade.png" alt="차 이미지">
+              </li>
+              <li>펠리세이드</li>
+              <li>
+                프레스티지 2.2(D)<br>차량가격 6,126만원
+              </li>
+              <li>
+                최종 특가 : 월 <span>480,000원</span>
+              </li>
+              <li>
+                <button type="button">간편 견적 신청</button>
+              </li>
+            </ul>
+          </div>
+          <div class="swiper-slide best_slide">
+            <ul>
+              <li>
+                <img src="/images/main/best_7st.png" alt="BEST 순위">
+              </li>
+              <li>
+                <img src="/images/main/car_palisade.png" alt="차 이미지">
+              </li>
+              <li>펠리세이드</li>
+              <li>
+                프레스티지 2.2(D)<br>차량가격 6,126만원
+              </li>
+              <li>
+                최종 특가 : 월 <span>480,000원</span>
+              </li>
+              <li>
+                <button type="button">간편 견적 신청</button>
+              </li>
+            </ul>
+          </div>
+          <div class="swiper-slide best_slide">
+            <ul>
+              <li>
+                <img src="/images/main/best_8st.png" alt="BEST 순위">
+              </li>
+              <li>
+                <img src="/images/main/car_palisade.png" alt="차 이미지">
+              </li>
+              <li>펠리세이드</li>
+              <li>
+                프레스티지 2.2(D)<br>차량가격 6,126만원
+              </li>
+              <li>
+                최종 특가 : 월 <span>480,000원</span>
+              </li>
+              <li>
+                <button type="button">간편 견적 신청</button>
+              </li>
+            </ul>
+          </div>
+          <div class="swiper-slide best_slide">
+            <ul>
+              <li>
+                <img src="/images/main/best_9st.png" alt="BEST 순위">
+              </li>
+              <li>
+                <img src="/images/main/car_palisade.png" alt="차 이미지">
+              </li>
+              <li>펠리세이드</li>
+              <li>
+                프레스티지 2.2(D)<br>차량가격 6,126만원
+              </li>
+              <li>
+                최종 특가 : 월 <span>480,000원</span>
+              </li>
+              <li>
+                <button type="button">간편 견적 신청</button>
+              </li>
+            </ul>
+          </div>
+          <div class="swiper-slide best_slide">
+            <ul>
+              <li>
+                <img src="/images/main/best_10st.png" alt="BEST 순위">
+              </li>
+              <li>
+                <img src="/images/main/car_palisade.png" alt="차 이미지">
+              </li>
+              <li>펠리세이드</li>
+              <li>
+                프레스티지 2.2(D)<br>차량가격 6,126만원
+              </li>
+              <li>
+                최종 특가 : 월 <span>480,000원</span>
+              </li>
+              <li>
+                <button type="button">간편 견적 신청</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="best-button-next"></div>
+        <div class="best-button-prev"></div>
+      </div>
+    </div>
+    <div class="more_btn_box">
+      <button type="button" class="plus_btn">더보기 <i class="fa-solid fa-plus"></i></button>
+      <button type="button" class="minus_btn">닫기 <i class="fa-solid fa-minus"></i></button>
+    </div>
+  </div>
+</section>
+
+<section class="section8 section_pd">
+  <div class="container">
+    <h2 class="main_tt">꼼꼼한 <span class="col_purple">신차줘</span> 출고 후기</h2>
+    <div class="after_box">
+      <p>신차줘 렌트카와<br><span>함께해주신 고객님</span>들의 이야기를 확인해보세요.</p>
+      <button type="button"><a href="javascript:">더 많은 후기 보러가기 <i class="fa-solid fa-angle-right"></i></a></button>
+    </div>
+    <div class="after_wrap">
+      <div class="after_list">
+        <div class="after_img after_sonata"></div>
+        <div class="after_info">
+          <h3>[현대] 쏘나타 LPI 2.0 스타일</h3>
+          <p>출고일 : 2021-01-04</p>
+          <p class="info_area">출고지역 : 서울</p>
+          <span class="after_badge after_rentbadge">장기렌트</span>
+        </div>
+      </div>
+      <div class="after_list">
+        <div class="after_img after_sorento"></div>
+        <div class="after_info">
+          <h3>[기아] 4세대 쏘렌토 프레스티지 2.2(D)</h3>
+          <p>출고일 : 2021-01-02</p>
+          <p class="info_area">출고지역 : 경기</p>
+          <span class="after_badge after_rentbadge">장기렌트</span>
+        </div>
+      </div>
+      <div class="after_list">
+        <div class="after_img after_520i"></div>
+        <div class="after_info">
+          <h3>[BMW] 520i M Sport Package</h3>
+          <p>출고일 : 2021-01-02</p>
+          <p class="info_area">출고지역 : 인천</p>
+          <span class="after_badge after_lissbadge">오토리스</span>
+        </div>
+      </div>
+      <div class="after_list">
+        <div class="after_img after_sonata"></div>
+        <div class="after_info">
+          <h3>[현대] 쏘나타 LPI 2.0 스타일</h3>
+          <p>출고일 : 2021-01-04</p>
+          <p class="info_area">출고지역 : 서울</p>
+          <span class="after_badge after_rentbadge">장기렌트</span>
+        </div>
+      </div>
+      <div class="after_list">
+        <div class="after_img after_sorento"></div>
+        <div class="after_info">
+          <h3>[기아] 4세대 쏘렌토 프레스티지 2.2(D)</h3>
+          <p>출고일 : 2021-01-02</p>
+          <p class="info_area">출고지역 : 경기</p>
+          <span class="after_badge after_rentbadge">장기렌트</span>
+        </div>
+      </div>
+      <div class="after_list">
+        <div class="after_img after_520i"></div>
+        <div class="after_info">
+          <h3>[BMW] 520i M Sport Package</h3>
+          <p>출고일 : 2021-01-02</p>
+          <p class="info_area">출고지역 : 인천</p>
+          <span class="after_badge after_lissbadge">오토리스</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section9 section_pd">
+  <div class="container">
+    <h2 class="main_tt">신차장기렌트카는 신차줘에서<span class="font-italic">!</span></h2>
+    <p class="font-italic"><span class="col_yellow">저렴, 신속, 신뢰, 혜택</span>으로 답합니다. <span class="col_yellow">고객 최대 만족</span>을 위해 전 임직원이 <span class="col_yellow">최선</span>을 다하겠습니다.</p>
+    <div class="icon_box">
+      <div class="swiper icon_swiper">
+        <div class="swiper-wrapper icon_wrapper">
+          <div class="swiper-slide icon_slide">
+            <img src="/images/main/section9_icon1.png" alt="관련 이미지">
+            <h3>최저가 보장</h3>
+            <p>받으신 견적보다 무조건 최저가 제안</p>
+          </div>
+          <div class="swiper-slide icon_slide">
+            <img src="/images/main/section9_icon2.png" alt="관련 이미지">
+            <h3>맞춤 견적·컨설팅</h3>
+            <p>無보증, 저신용 등 고객님의 경제상황에 맞게 맞춤 컨설팅 지원</p>
+          </div>
+          <div class="swiper-slide icon_slide">
+            <img src="/images/main/section9_icon3.png" alt="관련 이미지">
+            <h3>인기차종도 빠른출고</h3>
+            <p>신차줘에서는 많은 차량 확보로 고객님께 최대한 빠른 출고 약속</p>
+          </div>
+          <div class="swiper-slide icon_slide">
+            <img src="/images/main/section9_icon4.png" alt="관련 이미지">
+            <h3>블랙박스, 썬팅 장착</h3>
+            <p>출고 시 2CH 블랙박스 및 고급 썬팅 장착 (수입차 제외)</p>
+          </div>
+          <div class="swiper-slide icon_slide">
+            <img src="/images/main/section9_icon5.png" alt="관련 이미지">
+            <h3>1:1 매칭 관리</h3>
+            <p>차량 출고 부터 재렌트(리스), 인수, 반납까지 1:1 매칭 관리</p>
+          </div>
+          <div class="swiper-slide icon_slide">
+            <img src="/images/main/section9_icon6.png" alt="관련 이미지">
+            <h3>매월 특가 프로모션 진행</h3>
+            <p>국산, 수입 제조사와의 제휴로 월별 다양한 프로모션 혜택 제공</p>
+          </div>
+        </div>
+      </div>
+      <div class="icon-button-next"></div>
+      <div class="icon-button-prev"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section10 section_pd">
+  <div class="container">
+    <h2 class="main_tt">신차줘와 함께하는 <span class="col_purple">파트너사</span></h2>
+    <div class="partner_box">
+      <ul>
+        <li class="active"><a href="javascript:">제조사</a></li>
+        <li><a href="javascript:">금융사</a></li>
+      </ul>
+      <div class="make_cont">
+        <div>
+          <img src="/images/main/make_logo1.png" alt="제조사 로고">
+        </div>
+        <div>
+          <img src="/images/main/make_logo2.png" alt="제조사 로고">
+        </div>
+        <div>
+          <img src="/images/main/make_logo3.png" alt="제조사 로고">
+        </div>
+        <div>
+          <img src="/images/main/make_logo4.png" alt="제조사 로고">
+        </div>
+        <div>
+          <img src="/images/main/make_logo5.png" alt="제조사 로고">
+        </div>
+        <div>
+          <img src="/images/main/make_logo6.png" alt="제조사 로고">
+        </div>
+        <div>
+          <img src="/images/main/make_logo7.png" alt="제조사 로고">
+        </div>
+        <div>
+          <img src="/images/main/make_logo8.png" alt="제조사 로고">
+        </div>
+        <div>
+          <img src="/images/main/make_logo9.png" alt="제조사 로고">
+        </div>
+        <div>
+          <img src="/images/main/make_logo10.png" alt="제조사 로고">
+        </div>
+        <div>
+          <img src="/images/main/make_logo11.png" alt="제조사 로고">
+        </div>
+        <div>
+          <img src="/images/main/make_logo12.png" alt="제조사 로고">
+        </div>
+        <div>
+          <img src="/images/main/make_logo13.png" alt="제조사 로고">
+        </div>
+        <div>
+          <img src="/images/main/make_logo14.png" alt="제조사 로고">
+        </div>
+        <div>
+          <img src="/images/main/make_logo15.png" alt="제조사 로고">
+        </div>
+        <div>
+          <img src="/images/main/make_logo16.png" alt="제조사 로고">
+        </div>
+        <div>
+          <img src="/images/main/make_logo17.png" alt="제조사 로고">
+        </div>
+        <div>
+          <img src="/images/main/make_logo18.png" alt="제조사 로고">
+        </div>
+        <div>
+          <img src="/images/main/make_logo19.png" alt="제조사 로고">
+        </div>
+        <div>
+          <img src="/images/main/make_logo20.png" alt="제조사 로고">
+        </div>
+        <div>
+          <img src="/images/main/make_logo21.png" alt="제조사 로고">
+        </div>
+        <div>
+          <img src="/images/main/make_logo22.png" alt="제조사 로고">
+        </div>
+        <div>
+          <img src="/images/main/make_logo23.png" alt="제조사 로고">
+        </div>
+        <div>
+          <img src="/images/main/make_logo24.png" alt="제조사 로고">
+        </div>
+        <div>
+          <img src="/images/main/make_logo25.png" alt="제조사 로고">
+        </div>
+      </div>
+      <div class="bank_cont">
+        <div>
+          <img src="/images/main/bank_logo1.png" alt="금융사 로고">
+        </div>
+        <div>
+          <img src="/images/main/bank_logo2.png" alt="금융사 로고">
+        </div>
+        <div>
+          <img src="/images/main/bank_logo3.png" alt="금융사 로고">
+        </div>
+        <div>
+          <img src="/images/main/bank_logo4.png" alt="금융사 로고">
+        </div>
+        <div>
+          <img src="/images/main/bank_logo5.png" alt="금융사 로고">
+        </div>
+        <div>
+          <img src="/images/main/bank_logo6.png" alt="금융사 로고">
+        </div>
+        <div>
+          <img src="/images/main/bank_logo7.png" alt="금융사 로고">
+        </div>
+        <div>
+          <img src="/images/main/bank_logo8.png" alt="금융사 로고">
+        </div>
+        <div>
+          <img src="/images/main/bank_logo9.png" alt="금융사 로고">
+        </div>
+        <div>
+          <img src="/images/main/bank_logo10.png" alt="금융사 로고">
+        </div>
+        <div>
+          <img src="/images/main/bank_logo11.png" alt="금융사 로고">
+        </div>
+        <div>
+          <img src="/images/main/bank_logo12.png" alt="금융사 로고">
+        </div>
+        <div>
+          <img src="/images/main/bank_logo13.png" alt="금융사 로고">
+        </div>
+        <div>
+          <img src="/images/main/bank_logo14.png" alt="금융사 로고">
+        </div>
+        <div>
+          <img src="/images/main/bank_logo15.png" alt="금융사 로고">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section11 section_pd">
+  <div class="container">
+    <div class="notice_wrap">
+      <h2>공지사항 <a href="javascript:"><i class="fa-solid fa-plus"></i></a></h2>
+      <hr>
+      <div class="notice_list">
+        <a href="javascript:">
+          <span class="notice_badge red">특가</span>
+          <h3>2021년 1월 신차줘 특가 프로모션 차량 이벤트</h3>
+          <p>2021-01-02</p></a>
+      </div>
+      <div class="notice_list">
+        <a href="javascript:">
+          <span class="notice_badge black">공지</span>
+          <h3>2021년 1월 1일 신청 휴무안내</h3>
+          <p>2021-12-31</p>
+        </a>
+      </div>
+      <div class="notice_list">
+        <a href="javascript:">
+          <span class="notice_badge black">공지</span>
+          <h3>2020년 12월 25일 크리스마스 휴무 공지</h3>
+          <p>2021-12-24</p>
+        </a>
+      </div>
+      <div class="notice_list">
+        <a href="javascript:">
+          <span class="notice_badge purple">즉시출고</span>
+          <h3>2020년 12월 4주차 즉시 출고 가능 안내</h3>
+          <p>2021-12-18</p>
+        </a>
+      </div>
+      <div class="notice_list">
+        <a href="javascript:">
+          <span class="notice_badge black">공지</span>
+          <h3>견적신청 증가로 인해 서버 증설 작업 공지</h3>
+          <p>2021-12-04</p>
+        </a>
+      </div>
+      <div class="notice_list">
+        <a href="javascript:">
+          <span class="notice_badge orange">이벤트</span>
+          <h3>견적신청시 무료주유권 제공 이벤트</h3>
+          <p>2021-12-01</p>
+        </a>
+      </div>
+    </div>
+    <div class="inquiry_wrap">
+      <h2>견적신청 및 문의</h2>
+      <hr>
+      <div class="inquiry_tel">
+        <img src="/images/main/inquiry_tel.png" alt="연락처">
+        <p class="font-italic">1234-5678</p>
+      </div>
+      <div class="inquiry_list">
+        <div class="inquiry_icon pink">
+          <a href="javascript:">
+            <img src="/images/main/inquiry_icon1.png" alt="문의아이콘">
+            <h3>견적신청</h3>
+          </a>
+        </div>
+        <div class="inquiry_icon yellow">
+          <a href="javascript:">
+            <img src="/images/main/inquiry_icon2.png" alt="문의아이콘">
+            <h3>ID : 신차줘</h3>
+          </a>
+        </div>
+        <div class="inquiry_icon blue">
+          <a href="javascript:">
+            <img src="/images/main/inquiry_icon3.png" alt="문의아이콘">
+            <h3>자주묻는 질문</h3>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- footer -->
+<footer class="footer_wrap section_pd">
+  <div class="container">
+    <h1><a href="index.html"><img src="/images/common/footer_logo.png" alt="신차줘 로고"></a></h1>
+    <div class="footer_info">
+      <ul>
+        <li><a href="javascript:">회사소개</a></li>
+        <li><a href="javascript:">견적신청</a></li>
+        <li><a href="javascript:">이용약관</a></li>
+        <li><a href="javascript:">개인정보취급방침</a></li>
+        <li><a href="javascript:">차량별 공인연비</a></li>
+      </ul>
+      <p>
+        법인명 : (주)한스넷  ㅣ  상호명 : 신차줘   ㅣ   대표 : 한광재   ㅣ   주소 : 서울특별시 동대문구 왕산로 20, 5층(신설동, 동양빌딩)<br>
+        대표번호 : 1234-5678   ㅣ   FAX : 02-6190-4202   ㅣ   E-mail : newcars@newcars.co.kr<br>
+        사업자등록번호 : 723-86-00922   ㅣ   통신판매업신고 : 제2019-서울동대문-0924호<br>
+        COPYRIGHT ⓒ HANSNET. ALL RIGHT RESERVED.
+      </p>
+    </div>
+  </div>
+</footer>
+</body>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+</html>
